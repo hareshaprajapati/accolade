@@ -7,7 +7,7 @@ import {GrowerComponent} from './grower/grower.component';
 import {PatchComponent} from './patch/patch.component';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {JsonDataService} from './json-data.service';
+import {JsonDataService} from './service/json-data.service';
 import {GrowerSearchComponent} from './grower/grower-search/grower-search.component';
 import {MatButtonModule, MatDialogModule, MatInputModule, MatRippleModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';

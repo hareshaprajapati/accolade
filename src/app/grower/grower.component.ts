@@ -1,9 +1,9 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 
-import {JsonDataService} from '../json-data.service';
+import {JsonDataService} from '../service/json-data.service';
 import {GrowerSearchComponent} from './grower-search/grower-search.component';
 import {MatDialog} from '@angular/material';
-import {GrowerModel} from '../growerModel';
+import {GrowerModel} from './grower.model';
 
 @Component({
   selector: 'app-grower',
