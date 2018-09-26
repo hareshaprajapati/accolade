@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Search</h1>
+<div mat-dialog-content>
+  <!--<mat-form-field>-->
+  <label>Grower Number </label>  <input [(ngModel)]="data.no"> <!--placeholder="Grower Number"-->
+  <!--</mat-form-field>-->
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data.no" cdkFocusInitial>Ok</button>
+</div>
