@@ -20,11 +20,5 @@ export class JsonDataService {
           return Observable.throw('something went wrong');
         }
       );
-    /*return this.http.get('./assets/growerData.json')
-      .map((res: any) => res.json()).catch(err => {
-      console.log(err);
-      return Observable.throw('something went wrong');
-    }
-    );*/
   }
 }

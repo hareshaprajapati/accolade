@@ -3,12 +3,7 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {JsonDataService} from '../json-data.service';
 import {GrowerSearchComponent} from './grower-search/grower-search.component';
 import {MatDialog} from '@angular/material';
-
-export interface GrowerModel {
-  name: string;
-  no: number;
-}
-
+import {GrowerModel} from '../growerModel';
 
 @Component({
   selector: 'app-grower',
@@ -36,9 +31,9 @@ export class GrowerComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(GrowerSearchComponent, {
-      height: '300px',
-      width: '500px'
-      ,
+      height: '240px',
+      width: '350px',
+      position: { top: '10px', left: '50px' },
       data: {no: ''}
     });
 
@@ -52,9 +47,11 @@ export class GrowerComponent implements OnInit {
           valueFound = true;
         }
       }
-      if (!valueFound){
+      if (!valueFound) {
         console.log('wrong input');
         alert(' no data found');
+        this.growerData = null;
+        this.growerNumber.nativeElement.value = null;
       }
     });
   }
